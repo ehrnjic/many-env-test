@@ -1,0 +1,17 @@
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    environment: uat
+    steps:
+      - name: Show env vars & secrets values
+        run: |
+          echo "Var: ${{ env.MY_ENV_VAR }}"
+          echo "Secret: ${{ secrets.MY_SECRET }}"
