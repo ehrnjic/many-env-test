@@ -7,8 +7,7 @@ jobs:
     environment: uat
     steps:
       - name: Show env vars & secrets values
-        run: |
-          echo "Env: 
+        run: | 
           echo "Var: $MY_ENV_VAR" >> file
           echo "Secret: $MY_SECRET" >> file
           cat file
