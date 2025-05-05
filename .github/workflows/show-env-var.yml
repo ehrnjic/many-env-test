@@ -8,5 +8,6 @@ jobs:
     steps:
       - name: Show env vars & secrets values
         run: |
-          echo "Var: ${{ env.MY_ENV_VAR }}"
-          echo "Secret: ${{ secrets.MY_SECRET }}"
+          echo "Var: ${{ env.MY_ENV_VAR }}" >> file
+          echo "Secret: ${{ secrets.MY_SECRET }}" >> file
+          echo file
